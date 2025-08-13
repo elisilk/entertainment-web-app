@@ -1,0 +1,199 @@
+@import '@/assets/styles/base.css';
+
+/* semantic properties */
+:root {
+  /* colors */
+
+  /* colors -- backgrounds */
+  --color-background-primary: hsl(var(--color-blue-950));
+  --color-background-secondary: hsl(var(--color-blue-900));
+  --color-background-bookmark: hsl(var(--color-blue-950) / 50.06%);
+  --color-background-bookmark-hover: hsl(var(--color-white));
+  --color-background-play-button: hsl(var(--color-white) / 25%);
+
+  /* colors -- text */
+  --color-text-primary: hsl(var(--color-white));
+  --color-text-info: hsl(var(--color-white) / 0.75);
+
+  --color-nav-link: hsl(var(--color-blue-500));
+  --color-nav-active: hsl(var(--color-white));
+  --color-nav-hover: hsl(var(--color-red-500));
+  --color-input-caret: hsl(var(--color-red-500));
+  --color-bookmark-hover: hsl(var(--color-black));
+
+  /* colors -- other */
+  --color-border: hsl(var(--color-white));
+  --color-border-active: hsl(var(--color-blue-500));
+
+  /* sizing/spacing */
+
+  /* sizing/spacing -- main */
+  --main-margin-block-start: var(--space-0); /* (m) 0px -> (d) 64px */
+  --main-margin-block-end: var(--space-150); /* (m) 12px -> (t) 28px -> (d) 64px */
+  --main-margin-inline-start: var(--space-200); /* (m) 16px -> (t) 25px [24px] -> (d) 0px */
+  --main-margin-inline-end: var(--space-200); /* (m) 16px -> (t) 23px [24px] -> (d) 36px */
+  --main-section-gap: var(--space-300); /* (m) 24px -> (t) 32px -> (d) 40px */
+  --main-section-heading-margin-block-end: var(--space-300); /* (t) 24px -> (d) 32px */
+
+  /* sizing/spacing -- header */
+  --header-margin-block-start: var(--space-0); /* (m) 0px -> (t) 23px [24px] -> (d) 32px */
+  --header-margin-block-end: var(--space-300); /* (m) 24px -> (t) 32px -> (d) 32px */
+  --header-margin-inline-start: var(--space-0); /* (m) 0px -> (t) 25px [24px] -> (d) 32px */
+  --header-margin-inline-end: var(--space-0); /* (m) 0px -> (t) 25px [24px] -> (d) 36px */
+
+  --header-block-size-max: 60rem; /* 960px */
+  --header-inner-block-size: var(--space-300); /* (m) 24px -> (t) 32px */
+  --header-inner-inline-size: var(--space-0); /* (t) 100% -> (d) 40px */
+
+  /* sizing/spacing -- inline */
+  --header-padding-block: var(--space-200); /* (m) 16px -> (t) 20px -> (d) 34px */
+  --header-padding-inline: var(--space-200); /* (m) 16px -> (t) 20px -> (d) 28px */
+
+  /* typography */
+}
+
+/* viewport: mobile -> tablet */
+@media (min-width: 40rem) {
+  :root {
+    --main-margin-block-end: var(--space-350); /* (m) 12px -> (t) 28px -> (d) 64px */
+    --main-margin-inline-start: var(--space-300); /* (m) 16px -> (t) 25px [24px] -> (d) 0px */
+    --main-margin-inline-end: var(--space-300); /* (m) 16px -> (t) 23px [24px] -> (d) 36px */
+    --main-section-gap: var(--space-400); /* (m) 24px -> (t) 32px -> (d) 40px */
+
+    --header-margin-block-start: var(--space-300); /* (m) 0px -> (t) 23px [24px] -> (d) 32px */
+    --header-margin-block-end: var(--space-400); /* (m) 24px -> (t) 32px -> (d) 32px */
+
+    --header-inner-block-size: var(--space-400); /* (m) 24px -> (t) 32px */
+    --header-padding-block: var(--space-250); /* (m) 16px -> (t) 20px -> (d) 34px */
+
+    --header-margin-inline-start: var(--space-300); /* (m) 0px -> (t) 25px [24px] -> (d) 32px */
+    --header-margin-inline-end: var(--space-300); /* (m) 0px -> (t) 25px [24px] -> (d) 36px */
+
+    --header-padding-inline: var(--space-250); /* (m) 16px -> (t) 20px -> (d) 28px */
+  }
+}
+
+/* viewport: tablet -> desktop */
+@media (min-width: 60rem) {
+  :root {
+    --main-margin-block-start: var(--space-800); /* (m) 0px -> (d) 64px */
+    --main-margin-block-end: var(--space-800); /* (m) 12px -> (t) 28px -> (d) 64px */
+    --main-margin-inline-start: var(--space-0); /* (m) 16px -> (t) 25px [24px] -> (d) 0px */
+    --main-margin-inline-end: var(--space-400); /* (m) 16px -> (t) 23px [24px] -> (d) 36px */
+    --main-section-gap: var(--space-500); /* (m) 24px -> (t) 32px -> (d) 40px */
+    --main-section-heading-margin-block-end: var(--space-400); /* (t) 24px -> (d) 32px */
+
+    --header-margin-block-start: var(--space-400); /* (m) 0px -> (t) 23px [24px] -> (d) 32px */
+    --header-margin-block-end: var(--space-400); /* (m) 24px -> (t) 32px -> (d) 32px */
+
+    --header-padding-block: var(--space-425); /* (m) 16px -> (t) 20px -> (d) 34px */
+
+    --header-margin-inline-start: var(--space-400); /* (m) 0px -> (t) 25px [24px] -> (d) 32px */
+    --header-margin-inline-end: var(--space-450); /* (m) 0px -> (t) 25px [24px] -> (d) 36px */
+
+    --header-inline-size: var(--space-1200); /* (d) 96px */
+    --header-inner-inline-size: var(--space-500); /* (d) 40px */
+    --header-padding-inline: var(--space-350); /* (m) 16px -> (t) 20px -> (d) 28px */
+  }
+}
+
+/* -------------------- */
+/* Typography           */
+/* -------------------- */
+
+.text-preset1 {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-light);
+  letter-spacing: var(--ls-condensed2);
+}
+
+.text-preset2 {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-light);
+}
+
+.text-preset3 {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-medium);
+}
+
+.text-preset4 {
+  font-size: var(--fs-200);
+  font-weight: var(--fw-medium);
+}
+
+.text-preset5 {
+  font-size: var(--fs-100);
+  font-weight: var(--fw-light);
+}
+
+.text-preset6 {
+  font-size: var(--fs-50);
+  font-weight: var(--fw-light);
+}
+
+/* viewport: mobile -> tablet */
+@media (min-width: 40rem) {
+  .text-preset1 {
+    font-size: var(--fs-800);
+    letter-spacing: var(--ls-condensed1);
+  }
+
+  .text-preset2 {
+    font-size: var(--fs-700);
+  }
+
+  .text-preset3 {
+    font-size: var(--fs-700);
+  }
+
+  .text-preset4 {
+    font-size: var(--fs-500);
+  }
+
+  .text-preset5 {
+    font-size: var(--fs-300);
+  }
+
+  .text-preset6 {
+    font-size: var(--fs-150);
+  }
+}
+
+/* -------------------- */
+/* Body / App           */
+/* -------------------- */
+
+body {
+  color: var(--color-text-primary);
+  background-color: var(--color-background-primary);
+
+  font-family: var(--ff-base);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-regular);
+  letter-spacing: var(--ls-regular);
+
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------------- */
+/* Main / Section       */
+/* -------------------- */
+
+.main__section {
+  margin-inline-start: var(--main-margin-inline-start);
+}
+
+.main__section:not(.main__section--full) {
+  margin-inline-end: var(--main-margin-inline-end);
+}
+
+.main__section + .main__section,
+.main__section + .main__view {
+  margin-block-start: var(--main-section-gap); /* (m) 24px -> (t) 32px -> (d) 40px */
+}
+
+.main__section > .section__heading {
+  margin-block-end: var(--main-section-heading-margin-block-end);
+}

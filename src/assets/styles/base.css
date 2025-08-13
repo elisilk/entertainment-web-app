@@ -1,0 +1,186 @@
+/* -------------------- */
+/* Breakpoints          */
+/* -------------------- */
+
+/* Media query breakpoints (min-widths) */
+
+/* 22rem = 352px -- (tiny) mobile -> mobile */
+/* 40rem = 640px -- mobile -> tablet */
+/* 60rem = 960px -- tablet -> desktop */
+
+/* -------------------- */
+/* Fonts                */
+/* -------------------- */
+
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 300 500; /* light medium */
+  font-display: swap;
+  src: url('@/assets/fonts/Outfit-VariableFont_wght.woff2') format('woff2');
+}
+
+/* -------------------- */
+/* Custom properties    */
+/* -------------------- */
+
+/* general design system properties */
+:root {
+  /* color palette */
+  --color-white: 0 100% 100%; /* hex ffffff / rgb 255 255 255 */
+  --color-black: 0 0% 0%; /* hex 000000 / rgb 0 0 0 */
+
+  --color-grey-100: 0 0% 95%; /* hex F2F2F2 / rgb 242 242 242 */
+  --color-grey-50: 0 0% 99%; /* hex FCFCFC / rgb 252 252 252 */
+
+  --color-blue-950: 223 30% 9%; /* hex 10141E / rgb 16 20 30 */
+  --color-blue-900: 223 36% 14%; /* hex 161D2F / rgb 22 29 47 */
+  --color-blue-500: 223 23% 46%; /* hex 5A698F / rgb 90 105 143 */
+
+  --color-red-500: 0 97% 63%; /* hex FC4747 / rgb 252 71 71 */
+
+  /* shadows & gradients */
+  --gradient1: linear-gradient(hsl(var(--color-black) / 0), hsl(var(--color-black) / 0.75));
+
+  /* font-families */
+  --ff-base: 'Outfit', sans-serif;
+
+  /* font-weights */
+  --fw-medium: 500;
+  --fw-light: 300;
+
+  /* line height */
+  --lh-regular: 1.25;
+
+  /* letter-spacing */
+  --ls-condensed1: -0.5px;
+  --ls-condensed2: -0.3px;
+  --ls-regular: 0px;
+
+  /* font-sizes */
+  --fs-800: 2rem; /* 32px */
+  --fs-700: 1.5rem; /* 24px */
+  --fs-600: 1.25rem; /* 20px */
+  --fs-500: 1.125rem; /* 18px */
+  --fs-400: 1rem; /* 16px */
+  --fs-300: 0.9375rem; /* 15px */
+  --fs-200: 0.875rem; /* 14px */
+  --fs-150: 0.8125rem; /* 13px */
+  --fs-100: 0.75rem; /* 12px */
+  --fs-50: 0.6875rem; /* 11px */
+
+  /* spacing */
+  --space-1200: 6rem; /* 96px */
+  --space-1000: 5rem; /* 80px */
+  --space-900: 4.5rem; /* 72px */
+  --space-800: 4rem; /* 64px */
+  --space-700: 3.5rem; /* 56px */
+  --space-600: 3rem; /* 48px */
+  --space-500: 2.5rem; /* 40px */
+  --space-450: 2.25rem; /* 36px */
+  --space-425: 2.125rem; /* 34px */
+  --space-400: 2rem; /* 32px */
+  --space-375: 1.875rem; /* 30px */
+  --space-350: 1.75rem; /* 28px */
+  --space-300: 1.5rem; /* 24px */
+  --space-250: 1.25rem; /* 20px */
+  --space-200: 1rem; /* 16px */
+  --space-150: 0.75rem; /* 12px */
+  --space-125: 0.625rem; /* 10px */
+  --space-112: 0.5625rem; /* 9px */
+  --space-100: 0.5rem; /* 8px */
+  --space-50: 0.25rem; /* 4px */
+  --space-25: 0.125rem; /* 2px */
+  --space-0: 0; /* 0px */
+
+  /* border radii */
+  --br-900: 50%;
+  --br-400: 28.5px;
+  --br-300: 20px;
+  --br-200: 10px;
+  --br-150: 8px;
+}
+
+/* -------------------- */
+/* Reset                */
+/* -------------------- */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ol,
+ul,
+figure,
+picture {
+  margin: 0;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  border: none;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* make images easier to work with */
+img,
+svg,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* -------------------- */
+/* Body Setup           */
+/* -------------------- */
+
+body {
+  min-inline-size: 20rem; /* 320px */
+  min-block-size: 100dvb;
+}
+
+/* -------------------- */
+/* Utility classes      */
+/* -------------------- */
+
+/* screen reader only */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
