@@ -1,7 +1,7 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
-import { strInStr } from '@/utils/index.js'
+import { isNonEmptyStr, strInStr } from '@/utils/index.js'
 
 export const useMediaStore = defineStore('media', () => {
   // state properties
@@ -9,10 +9,10 @@ export const useMediaStore = defineStore('media', () => {
   const bookmarks = ref([])
 
   // getters
-  const isSearchActive = computed(() => searchString.value)
-  const matchesSearch = computed(
-    () => (stringToSearch) => strInStr(stringToSearch, searchString.value),
-  )
+  const isSearchActive = computed(() => isNonEmptyStr(searchString.value))
+  const matchesSearch = computed(() => (stringToSearch) => {
+    return strInStr(stringToSearch, searchString.value)
+  })
   const findBookmarkIndex = computed(
     () => (title) => bookmarks.value.findIndex((item) => item.title === title),
   )

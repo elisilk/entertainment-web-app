@@ -41,7 +41,9 @@ onMounted(() => {
     <section aria-labelledby="section-movies-heading" class="main__section">
       <h2 id="section-movies-heading" class="section__heading text-preset1">
         Bookmarked Movies
-        <span v-if="mediaStore.isSearchActive"> (Found {{ numResultsMovies }} results) </span>
+        <span v-if="mediaStore.isSearchActive">
+          (Found {{ numResultsMovies }} result{{ numResultsMovies === 1 ? '' : 's' }})
+        </span>
       </h2>
       <MediaList listName="bookmarked-movies" :listData="bookmarkedMoviesMediaFiltered" />
     </section>
@@ -49,7 +51,9 @@ onMounted(() => {
     <section aria-labelledby="section-tv-series-heading" class="main__section">
       <h2 id="section-tv-series-heading" class="section__heading text-preset1">
         Bookmarked TV Series
-        <span v-if="mediaStore.isSearchActive"> (Found {{ numResultsTVSeries }} results) </span>
+        <span v-if="mediaStore.isSearchActive">
+          (Found {{ numResultsTVSeries }} result{{ numResultsTVSeries === 1 ? '' : 's' }})
+        </span>
       </h2>
       <MediaList listName="bookmarked-tv-series" :listData="bookmarkedTVSeriesMediaFiltered" />
     </section>

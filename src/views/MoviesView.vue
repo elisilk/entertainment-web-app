@@ -30,7 +30,9 @@ onMounted(() => {
   <div class="main__view">
     <section aria-labelledby="section-movies-heading" class="main__section">
       <h2 v-if="mediaStore.isSearchActive" class="section__heading text-preset1">
-        Found {{ numResults }} results for '{{ mediaStore.searchString }}'
+        Found {{ numResults }} result{{ numResults === 1 ? '' : 's' }} for '{{
+          mediaStore.searchString
+        }}'
       </h2>
       <h2 v-else id="section-movies-heading" class="section__heading text-preset1">
         {{ categoryHeading }}
