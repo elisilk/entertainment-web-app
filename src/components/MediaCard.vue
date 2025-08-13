@@ -101,7 +101,7 @@ function handlePlayButtonClick(event) {
         viewBox="0 0 30 30"
         class="play__icon text-preset4"
         role="presentation"
-        aria-label="Play media"
+        aria-hidden="true"
         fill="currentColor"
       >
         <path
