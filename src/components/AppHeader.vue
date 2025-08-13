@@ -7,12 +7,13 @@
       <ul class="nav__list">
         <li class="nav__item">
           <RouterLink :to="{ name: 'Home' }" class="nav__link">
+            <span class="sr-only">Home</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               class="nav__icon"
               role="img"
-              aria-label="Nav Home"
+              aria-hidden="true"
               fill="currentColor"
             >
               <path
@@ -23,12 +24,13 @@
         </li>
         <li class="nav__item">
           <RouterLink :to="{ name: 'Movies' }" class="nav__link">
+            <span class="sr-only">Movies</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               class="nav__icon"
               role="img"
-              aria-label="Nav Movies"
+              aria-hidden="true"
               fill="currentColor"
             >
               <path
@@ -39,12 +41,13 @@
         </li>
         <li class="nav__item">
           <RouterLink :to="{ name: 'TV Series' }" class="nav__link">
+            <span class="sr-only">TV Series</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               class="nav__icon"
               role="img"
-              aria-label="Nav TV Series"
+              aria-hidden="true"
               fill="currentColor"
             >
               <path
@@ -55,12 +58,13 @@
         </li>
         <li class="nav__item">
           <RouterLink :to="{ name: 'Bookmarked' }" class="nav__link">
+            <span class="sr-only">Bookmarked</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 17 20"
               class="nav__icon"
               role="img"
-              aria-label="Nav Bookmarked"
+              aria-hidden="true"
               fill="currentColor"
             >
               <path
