@@ -42,7 +42,7 @@ function handlePlayButtonClick(event) {
 </script>
 
 <template>
-  <div class="card" :class="{ 'card--horizontal': isHorizontal }">
+  <article class="card" :class="{ 'card--horizontal': isHorizontal }">
     <div class="card__text">
       <h3 class="card__title" :class="[isHorizontal ? 'text-preset3' : 'text-preset4']">
         {{ cardData.title }}
@@ -147,7 +147,7 @@ function handlePlayButtonClick(event) {
         />
       </svg>
     </label>
-  </div>
+  </article>
 </template>
 
 <style scoped>
