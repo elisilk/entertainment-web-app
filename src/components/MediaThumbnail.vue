@@ -21,8 +21,8 @@ const isTrending = computed(() => props.group === 'trending')
 
 <template>
   <picture class="media__thumbnail" :class="{ 'media__thumbnail--trending': isTrending }">
-    <source :srcset="srcs[group].large" media="(width >= 900px)" />
-    <source v-if="!isTrending" :srcset="srcs[group].medium" media="(width >= 600px)" />
+    <source :srcset="srcs[group].large" media="(min-width: 900px)" />
+    <source v-if="!isTrending" :srcset="srcs[group].medium" media="(min-width: 600px)" />
     <img :src="srcs[group].small" :alt="alt" />
   </picture>
 </template>
