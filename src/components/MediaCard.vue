@@ -57,7 +57,7 @@ function handlePlayButtonClick(event) {
             viewBox="0 0 12 12"
             class="category__icon"
             role="presentation"
-            aria-label="Movie category"
+            aria-hidden="true"
             fill="currentColor"
           >
             <path
@@ -70,7 +70,7 @@ function handlePlayButtonClick(event) {
             viewBox="0 0 12 12"
             class="category__icon"
             role="presentation"
-            aria-label="TV series category"
+            aria-hidden="true"
             fill="currentColor"
           >
             <path
@@ -174,14 +174,13 @@ function handlePlayButtonClick(event) {
   position: relative;
   grid-area: text;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: var(--space-100);
 }
 
 .card--horizontal > .card__text {
   padding-inline: var(--info-padding-inline);
   padding-block: var(--info-padding-block);
-  flex-direction: column-reverse;
 }
 
 .card--horizontal > .card__text::before {

@@ -9,7 +9,7 @@ import SearchBar from '@/components/SearchBar.vue'
 
     <AppHeader />
 
-    <main class="app__main" id="main-content">
+    <main class="app__main" id="main-content" tabindex="-1">
       <h1 class="sr-only">Entertainment Web App</h1>
 
       <SearchBar />
