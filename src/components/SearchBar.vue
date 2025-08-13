@@ -14,7 +14,7 @@ function handleSubmit() {
     <form role="search" class="search__form" @submit.prevent="handleSubmit">
       <label class="search__label">
         <span class="sr-only">Search for movies or TV series</span>
-        <img src="/icons/icon-search.svg" alt="search icon" class="search__icon" />
+        <img src="/icons/icon-search.svg" class="search__icon" alt="" aria-hidden="true" />
         <input
           class="search__input text-preset2"
           type="search"
