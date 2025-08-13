@@ -20,11 +20,11 @@ export const useMediaStore = defineStore('media', () => {
 
   // actions
   function addBookmark(title) {
-    const index = this.findBookmarkIndex(title)
+    const index = findBookmarkIndex.value(title)
     if (index === -1) bookmarks.value.push({ title })
   }
   function removeBookmark(title) {
-    const index = this.findBookmarkIndex(title)
+    const index = findBookmarkIndex.value(title)
     if (index !== -1) bookmarks.value.splice(index, 1)
   }
 

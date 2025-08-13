@@ -10,7 +10,10 @@ const mediaStore = useMediaStore()
 // const categoryValue = 'Recommended'
 // const categoryHeading = 'Recommended for you'
 
+// Remove the trending media items from the recommended media
 const recommendedMedia = computed(() => allMedia.filter((item) => !item.isTrending))
+// OR use all the media
+// const recommendedMedia = computed(() => allMedia)
 
 const recommendedMediaFiltered = computed(() =>
   mediaStore.isSearchActive
