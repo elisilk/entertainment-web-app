@@ -2,23 +2,29 @@
 import { useMediaStore } from '@/stores/media'
 
 const mediaStore = useMediaStore()
+
+function handleSubmit() {
+  return true
+}
 </script>
 
 <template>
   <section class="main__section" aria-labelledby="section-search-heading">
     <h2 id="section-search-heading" class="sr-only">Search</h2>
-    <label class="search__label">
-      <span class="sr-only">Search for movies or TV series</span>
-      <img src="/icons/icon-search.svg" alt="search icon" class="search__icon" />
-      <input
-        class="search__input text-preset2"
-        type="search"
-        id="search"
-        name="search"
-        placeholder="Search for movies or TV series"
-        v-model="mediaStore.searchString"
-      />
-    </label>
+    <form role="search" class="search__form" @submit.prevent="handleSubmit">
+      <label class="search__label">
+        <span class="sr-only">Search for movies or TV series</span>
+        <img src="/icons/icon-search.svg" alt="search icon" class="search__icon" />
+        <input
+          class="search__input text-preset2"
+          type="search"
+          id="search"
+          name="search"
+          placeholder="Search for movies or TV series"
+          v-model="mediaStore.searchString"
+        />
+      </label>
+    </form>
   </section>
 </template>
 
