@@ -323,7 +323,8 @@ function handlePlayButtonClick(event) {
 }
 
 .play__icon {
-  max-block-size: 100%;
+  block-size: 100%;
+  inline-size: auto;
 }
 
 .card__button:focus-visible {
