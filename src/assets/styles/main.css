@@ -34,6 +34,7 @@
   --main-margin-inline-end: var(--space-200); /* (m) 16px -> (t) 23px [24px] -> (d) 36px */
   --main-section-gap: var(--space-300); /* (m) 24px -> (t) 32px -> (d) 40px */
   --main-section-heading-margin-block-end: var(--space-300); /* (t) 24px -> (d) 32px */
+  --main-search-bar-padding-block: var(--space-200); /* 16px */
 
   /* sizing/spacing -- header */
   --header-margin-block-start: var(--space-0); /* (m) 0px -> (t) 23px [24px] -> (d) 32px */
@@ -76,7 +77,7 @@
 /* viewport: tablet -> desktop */
 @media (min-width: 60rem) {
   :root {
-    --main-margin-block-start: var(--space-800); /* (m) 0px -> (d) 64px */
+    --main-margin-block-start: var(--space-600); /* (m) 0px -> (d) 64px [-15px = 48px] */
     --main-margin-block-end: var(--space-800); /* (m) 12px -> (t) 28px -> (d) 64px */
     --main-margin-inline-start: var(--space-0); /* (m) 16px -> (t) 25px [24px] -> (d) 0px */
     --main-margin-inline-end: var(--space-400); /* (m) 16px -> (t) 23px [24px] -> (d) 36px */
@@ -189,8 +190,11 @@ body {
   margin-inline-end: var(--main-margin-inline-end);
 }
 
-.main__section + .main__section,
 .main__section + .main__view {
+  margin-block-start: calc(var(--main-section-gap) - var(--main-search-bar-padding-block));
+}
+
+.main__section + .main__section {
   margin-block-start: var(--main-section-gap); /* (m) 24px -> (t) 32px -> (d) 40px */
 }
 

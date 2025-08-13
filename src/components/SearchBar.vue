@@ -57,8 +57,7 @@ function handleSubmit() {
   color: var(--color-text-primary);
 
   margin: 0;
-  padding: 0;
-  padding-block: var(--space-200);
+  padding: var(--space-200) 0;
 
   caret-color: var(--color-input-caret);
 }
