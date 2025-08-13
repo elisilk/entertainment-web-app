@@ -97,16 +97,20 @@ As always, so many cool :sunglasses: things. Here are some of the key resources 
 Specific areas that the solution should be improved (known issues):
 
 - [ ] There is a lot of repeated code in the different views. Consolidate into one view that is sent props for different routes.
-- [ ] Update how the searching happens, especially as it relates to matching (or prepping) strings. Should more characters be escaped?
+- [ ] Update how the searching happens, especially as it relates to matching (or prepping) strings. Should more characters be escaped? Currently, the string is trimmed of whitespace and single quotes are escaped, but maybe more characters are possible (e.g., double quotes).
   - [JavaScript Regular Expressions](https://www.30secondsofcode.org/js/regexp/p/1/)
   - [`RegExp.escape()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/escape)
 - [ ] On Safari iOS, it seems like I have to touch the bookmark icon twice to get it to register and turn on. Why? How to fix?
-- [ ] On Safari iOS, it seems like the Play button icon and text are not aligned properly.
+- [x] On Safari iOS, it seems like the Play button icon and text are not aligned properly. Fixed the issue as it was with the sizing of the play icon.
 - [ ] Add fluid font sizing and spacing so the transitions between viewport sizes are more seamless.
 
 Specific enhancements I'd like to make (feature requests):
 
-- [ ] ...
+- [ ] Do the bonus challenges
+  - [ ] Retrieve data from [OMDb API](https://www.omdbapi.com/) rather than a local, static JSON file
+  - [ ] Make a full-stack application
+  - [ ] Implement an auth flow
+- [ ] If not a full-stack application, then at least save the current bookmarks in local storage
 
 More general ideas I want to consider:
 
