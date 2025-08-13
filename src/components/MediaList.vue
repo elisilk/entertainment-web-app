@@ -7,7 +7,7 @@ defineProps({
     required: true,
   },
   listData: {
-    type: Object,
+    type: Array,
     required: true,
   },
   listDirection: {
