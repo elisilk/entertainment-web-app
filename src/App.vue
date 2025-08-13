@@ -1,11 +1,21 @@
 <script setup>
 import AppHeader from '@/components/AppHeader.vue'
 import SearchBar from '@/components/SearchBar.vue'
+
+import { useTemplateRef } from 'vue'
+
+const mainContent = useTemplateRef('main-content')
+
+function handleSkipToMain() {
+  mainContent.value.focus()
+}
 </script>
 
 <template>
   <div class="app__container">
-    <a class="skip-to-main" href="#main-content">Skip to main content</a>
+    <a class="skip-to-main" href="#main-content" ref="main-content" @click="handleSkipToMain"
+      >Skip to main content</a
+    >
 
     <AppHeader />
 
