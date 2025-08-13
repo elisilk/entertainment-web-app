@@ -89,6 +89,7 @@ As always, so many cool :sunglasses: things. Here are some of the key resources 
   - [`String.prototype.includes()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
 - [Using CSS gradients](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - [`:focus-within`](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within)
+- [How to Build HTML Forms Right: Semantics](https://austingil.com/how-to-build-html-forms-right-semantics/) - A really nicely-written 5-part series on forms. Lots of useful, easy-to-understand information in here.
 
 ### Continued development
 

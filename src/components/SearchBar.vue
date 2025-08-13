@@ -24,6 +24,7 @@ function handleSubmit() {
           v-model="mediaStore.searchString"
         />
       </label>
+      <button type="submit" class="sr-only" tabindex="-1">Submit</button>
     </form>
   </section>
 </template>
@@ -62,6 +63,7 @@ function handleSubmit() {
   caret-color: var(--color-input-caret);
 }
 
+.search__form:focus-within .search__input,
 .search__input:focus-visible {
   border-block-end: 1px solid var(--color-border-active);
 }
