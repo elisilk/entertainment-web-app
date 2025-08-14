@@ -96,6 +96,12 @@ As always, so many cool :sunglasses: things. Here are some of the key resources 
 
 Specific areas that the solution should be improved (known issues):
 
+- [ ] Routing as an Single Page Apps (SPA) on GitHub Pages. From what I could determine, there doesn't seem to be a great, existing solution right now. My options seem to be: (1) move to Netflify, (2) use [Hash Mode](https://router.vuejs.org/guide/essentials/history-mode#Hash-Mode). For now, I will move to Hash Mode, although I'd love to look more into this and consider other options.
+  - [Vue Router - Different History modes](https://router.vuejs.org/guide/essentials/history-mode)
+  - [Single Page Apps for GitHub Pages](https://github.com/rafgraph/spa-github-pages)
+  - [Is there a configuration in Github Pages that allows you to redirect everything to index.html for a Single Page App?](https://stackoverflow.com/questions/36296012/is-there-a-configuration-in-github-pages-that-allows-you-to-redirect-everything)
+  - [Vue School - Vue Router 4 for Everyone: Master Routing in Vue.js - History Mode: HTML5 vs Hash](https://vueschool.io/lessons/history-mode)
+  - [Netlify Docs - History `pushState` and single-page apps](https://docs.netlify.com/manage/routing/redirects/rewrites-proxies/#history-pushstate-and-single-page-apps)
 - [ ] There is a lot of repeated code in the different views. Consolidate into one view that is sent props for different routes.
 - [ ] Update how the searching happens, especially as it relates to matching (or prepping) strings. Should more characters be escaped? Currently, the string is trimmed of whitespace and single quotes are escaped, but maybe more characters are possible (e.g., double quotes).
   - [JavaScript Regular Expressions](https://www.30secondsofcode.org/js/regexp/p/1/)
@@ -108,8 +114,8 @@ Specific enhancements I'd like to make (feature requests):
 
 - [ ] Do the bonus challenges
   - [ ] Retrieve data from [OMDb API](https://www.omdbapi.com/) rather than a local, static JSON file
+  - [ ] Implement an auth flow and the login + signup views
   - [ ] Make a full-stack application
-  - [ ] Implement an auth flow
 - [ ] If not a full-stack application, then at least save the current bookmarks in local storage
 
 More general ideas I want to consider:
