@@ -39,6 +39,11 @@ const bookmarkValue = computed({
 function handlePlayButtonClick(event) {
   console.log('play clicked:', event.target.id)
 }
+
+function handleBookmarkChecked(event) {
+  console.log('bookmark clicked:', event.target.id)
+  event.stopPropagation()
+}
 </script>
 
 <template>
@@ -118,8 +123,8 @@ function handlePlayButtonClick(event) {
         :name="`${listName}-bookmark-${slugify(cardData.title)}`"
         :id="`${listName}-bookmark-${slugify(cardData.title)}`"
         v-model="bookmarkValue"
+        @click="handleBookmarkChecked"
       />
-      <!-- @click="handleBookmarkChecked" -->
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 12 14"
@@ -214,6 +219,7 @@ function handlePlayButtonClick(event) {
   display: grid;
   grid-template-areas: 'stack';
   place-items: center;
+  z-index: 1;
 }
 
 .card__button {
@@ -299,7 +305,7 @@ function handlePlayButtonClick(event) {
   cursor: pointer;
   padding: 0;
   margin: 0;
-  opacity: 0;
+  opacity: 0.5;
   block-size: 100%;
   inline-size: 100%;
   z-index: 1;
