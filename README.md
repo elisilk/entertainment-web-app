@@ -40,7 +40,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/elisilk/entertainment-web-app](https://github.com/elisilk/entertainment-web-app)
-- Live Site URL: [https://elisilk.github.io/entertainment-web-app/](https://elisilk.github.io/entertainment-web-app/)
+- Live Site URL: [https://entertainment-web-app-fm.netlify.app/](https://entertainment-web-app-fm.netlify.app/)
 
 ## My process
 
@@ -96,7 +96,9 @@ As always, so many cool :sunglasses: things. Here are some of the key resources 
 
 Specific areas that the solution should be improved (known issues):
 
-- [ ] Routing as an Single Page Apps (SPA) on GitHub Pages. From what I could determine, there doesn't seem to be a great, existing solution right now. My options seem to be: (1) move to Netflify, (2) use [Hash Mode](https://router.vuejs.org/guide/essentials/history-mode#Hash-Mode). For now, I will move to Hash Mode, although I'd love to look more into this and consider other options.
+- [ ] Routing as an Single Page Apps (SPA) on GitHub Pages. From what I could determine, there doesn't seem to be a great, existing solution right now. My options seem to be: (1) move to Netflify, (2) use [Hash Mode](https://router.vuejs.org/guide/essentials/history-mode#Hash-Mode).
+  - Update 2: After much frustration with the hash mode, I reverted back to HTML5 history mode and then published to Netlify instead.
+  - Update 1: For now, I will move to Hash Mode, although I'd love to look more into this and consider other options.
   - [Vue Router - Different History modes](https://router.vuejs.org/guide/essentials/history-mode)
   - [Single Page Apps for GitHub Pages](https://github.com/rafgraph/spa-github-pages)
   - [Is there a configuration in Github Pages that allows you to redirect everything to index.html for a Single Page App?](https://stackoverflow.com/questions/36296012/is-there-a-configuration-in-github-pages-that-allows-you-to-redirect-everything)
@@ -104,10 +106,14 @@ Specific areas that the solution should be improved (known issues):
   - [Netlify Docs - History `pushState` and single-page apps](https://docs.netlify.com/manage/routing/redirects/rewrites-proxies/#history-pushstate-and-single-page-apps)
 - [ ] Skip to main content anchor link
   - Okay, now this is frustrating. So because of the prior issue, now using the hash history mode creates another issue with the skip-to-main navigation links. Ugh!
+  - Update 1: fixed for now when reverted back to HTML5 history mode and served the live site on Netlify
   - [Vue - Best Practices - Accessibility - Skip link](https://vuejs.org/guide/best-practices/accessibility.html#skip-link)
   - [Vue Router - Scroll Behavior](https://router.vuejs.org/guide/advanced/scroll-behavior.html)
   - [Improved accessible routing in Vue.js (updated)](https://marcus.io/blog/20200127-improved-accessible-routing-vuejs)
   - [Fake skip links in Vue Router](https://angelika.me/2020/07/25/fake-skip-links-in-vue-router/)
+- [ ] Implement a 404 page
+  - [Vue Router - Dynamic Route Matching with Params - Catch all / 404 Not found Route](https://router.vuejs.org/guide/essentials/dynamic-matching#Catch-all-404-Not-found-Route)
+  - [Vue Router - Different History modes - Caveat](https://router.vuejs.org/guide/essentials/history-mode.html#Caveat)
 - [ ] There is a lot of repeated code in the different views. Consolidate into one view that is sent props for different routes.
 - [ ] Update how the searching happens, especially as it relates to matching (or prepping) strings. Should more characters be escaped? Currently, the string is trimmed of whitespace and single quotes are escaped, but maybe more characters are possible (e.g., double quotes).
   - [JavaScript Regular Expressions](https://www.30secondsofcode.org/js/regexp/p/1/)
