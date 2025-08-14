@@ -37,11 +37,12 @@ const bookmarkValue = computed({
 })
 
 function handlePlayButtonClick(event) {
-  console.log('play clicked:', event.target.id)
+  // console.log('play clicked:', event.target.id)
+  event.stopPropagation()
 }
 
 function handleBookmarkChecked(event) {
-  console.log('bookmark clicked:', event.target.id)
+  // console.log('bookmark clicked:', event.target.id)
   event.stopPropagation()
 }
 </script>
@@ -286,26 +287,32 @@ function handleBookmarkChecked(event) {
   grid-area: stack;
 }
 
-.card__bookmark:hover,
 .card__bookmark:focus-within {
   background-color: var(--color-background-bookmark-hover);
+  outline-offset: 2px;
+  outline: 2px dashed var(--color-text-primary);
 }
 
-.card__bookmark:hover svg,
 .card__bookmark:focus-within svg {
   color: var(--color-bookmark-hover);
 }
 
-.card__bookmark:focus-within {
-  outline-offset: 2px;
-  outline: 2px dashed var(--color-text-primary);
+/* Limit hover states to devices that support them */
+@media (hover) {
+  .card__bookmark:hover {
+    background-color: var(--color-background-bookmark-hover);
+  }
+
+  .card__bookmark:hover svg {
+    color: var(--color-bookmark-hover);
+  }
 }
 
 .card__bookmark-checkbox {
   cursor: pointer;
   padding: 0;
   margin: 0;
-  opacity: 0.5;
+  opacity: 0;
   block-size: 100%;
   inline-size: 100%;
   z-index: 1;
