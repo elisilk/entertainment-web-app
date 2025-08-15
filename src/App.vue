@@ -13,13 +13,11 @@ function handleSkipToMain() {
 
 <template>
   <div class="app__container">
-    <a class="skip-to-main" href="#main-content" ref="main-content" @click="handleSkipToMain"
-      >Skip to main content</a
-    >
+    <a class="skip-to-main" href="#main-content" @click="handleSkipToMain">Skip to main content</a>
 
     <AppHeader />
 
-    <main class="app__main" id="main-content" tabindex="-1">
+    <main class="app__main" id="main-content" tabindex="-1" ref="main-content">
       <h1 class="sr-only">Entertainment Web App</h1>
 
       <SearchBar />
